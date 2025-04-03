@@ -25,105 +25,214 @@
     line-height: 1.6;
   }
   
+ /* Base Styles (Already optimized for larger screens) */
+.navbar {
+  margin: 0 15%;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #1a1a1a;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a:hover, .socials a:hover {
+  color: #27ae3a;
+}
+
+.socials a {
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 50px;
+}
+
+.text-section {
+  max-width: 600px;
+}
+
+.text-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #2ecc40;
+  color: white;
+  font-size: larger;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #2ecc40;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #27ae3a;
+}
+
+.worked-with {
+  margin: 150px 0px;
+  color: #27ae3a;
+}
+
+.worked-with b {
+  font-size: 20px;
+}
+
+.logos {
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logos img {
+  height: 80px;
+  max-width: 100%;
+  filter: brightness(0.7);
+}
+
+.image-section .profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 300px;
+}
+
+/* =============== RESPONSIVE DESIGN =============== */
+@media (max-width: 1024px) {
   .navbar {
-    margin: 0 15%;  
-    border-radius: 0 0 30px 30px;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background-color: #1a1a1a;
+      margin: 0 5%;
+      padding: 15px 30px;
   }
-  
+
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+      gap: 20px;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-  }
-  .nav-links a:hover{
-    color: #27ae3a;
 
-  }
-  .socials a:hover{
-    color: #27ae3a;
-  }
-  .socials a {
-    margin-left: 20px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
   .intro {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 80px 50px;
+      flex-direction: column;
+      text-align: center;
+      padding: 50px 20px;
   }
-  
-  .text-section {
-    max-width: 600px;
-  }
-  
-  .text-section h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  .text-section p {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    background-color: #2ecc40;
-    color: white;
-    font-size: larger;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 6px;
-    box-shadow: 0 0 10px #2ecc40;
-    transition: background 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #27ae3a;
-  }
-  
-  .worked-with {
-    margin:150px 0px;
-    color: #27ae3a;
-  }
-  .worked-with b{
-    font-size: 20px;
-  }
-  .logos {
-    margin: 50px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between ;
-    align-self: center;
 
+  .text-section h1 {
+      font-size: 36px;
   }
-  
-  .logos img {
-    height: 100px;
-    filter: brightness(0.7);
+
+  .text-section p {
+      font-size: 18px;
   }
-  
+
   .image-section .profile-pic {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin-bottom: 300px;
+      width: 250px;
+      height: 250px;
+      margin-bottom: 50px;
   }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px;
+  }
+
+  .intro {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 10px;
+  }
+
+  .text-section h1 {
+      font-size: 28px;
+  }
+
+  .text-section p {
+      font-size: 16px;
+  }
+
+  .cta-button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+
+  .image-section .profile-pic {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 30px;
+  }
+
+  .logos img {
+      height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px;
+  }
+
+  .nav-links {
+      gap: 10px;
+  }
+
+  .text-section h1 {
+      font-size: 24px;
+  }
+
+  .text-section p {
+      font-size: 14px;
+  }
+
+  .cta-button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  .image-section .profile-pic {
+      width: 150px;
+      height: 150px;
+  }
+
+  .logos img {
+      height: 50px;
+  }
+}
+
   
 #contact {
   background: #111;
